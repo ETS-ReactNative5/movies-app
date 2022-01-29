@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider Component should match the List Carousel Item component snapshot 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "opacity": 1,
+      "paddingBottom": 10,
+      "paddingLeft": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+  testID="container-wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Array [
+          Object {
+            "borderRadius": 15,
+            "height": 150,
+            "resizeMode": "cover",
+            "width": 130,
+          },
+        ],
+      ]
+    }
+  >
+    <FastImageView
+      resizeMode="cover"
+      source={
+        Object {
+          "uri": "https://image.tmdb.org/t/p/w500/image",
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      testID="image-container"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#4a0909",
+          "borderRadius": 15,
+          "left": 25,
+          "paddingBottom": 5,
+          "paddingLeft": 5,
+          "paddingRight": 5,
+          "paddingTop": 5,
+          "position": "absolute",
+          "top": 145,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 15,
+            "fontWeight": "bold",
+          },
+        ]
+      }
+      testID="rating-container"
+    >
+      1234
+    </Text>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 16,
+          "fontWeight": "bold",
+          "marginBottom": 5,
+          "marginTop": 15,
+          "textAlign": "center",
+          "width": 130,
+        },
+      ]
+    }
+    testID="title-wrapper"
+  >
+    Title
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {},
+      ]
+    }
+  >
+    20 Nov, 2015
+  </Text>
+</View>
+`;
