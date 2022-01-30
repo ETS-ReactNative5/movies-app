@@ -11,6 +11,8 @@ import {
   Heading,
   ReviewsContainer,
 } from './styled';
+import { imagePrefixUrl } from '../../utils';
+import { api_key } from '../../config';
 
 export const MovieDetailScreen = ({ route }) => {
 
@@ -26,19 +28,19 @@ export const MovieDetailScreen = ({ route }) => {
     (async () => {
       try {
         if (!movieData?.length) {
-          const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=8c793d948d52df975cb1f74b7c39c00f&language=en-US`);
+          const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}&language=en-US`);
           setMovieData(response?.data);
         }
         if (!castData?.length) {
-          const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=8c793d948d52df975cb1f74b7c39c00f&language=en-US`);
+          const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${api_key}&language=en-US`);
           setCastData(response?.data?.cast?.slice(0, 10));
         }
         if (!recommendations?.length) {
-          const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=8c793d948d52df975cb1f74b7c39c00f&language=en-US`);
+          const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${api_key}&language=en-US`);
           setRecommendations(response?.data?.results?.slice(0, 10));
         }
         if (!reviews?.length) {
-          const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=8c793d948d52df975cb1f74b7c39c00f&language=en-US`);
+          const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${api_key}&language=en-US`);
           setReviews(response?.data?.results?.slice(0, 5));
         }
         setIsLoading(false);
@@ -71,7 +73,7 @@ export const MovieDetailScreen = ({ route }) => {
       : (
         <ScrollableWithBannerLayout
           title={original_title}
-          bannerImageSrc={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+          bannerImageSrc={imagePrefixUrl+poster_path}
         >
           <Header
             language={original_language}

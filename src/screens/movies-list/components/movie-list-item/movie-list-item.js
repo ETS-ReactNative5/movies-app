@@ -12,6 +12,7 @@ import {
     OtherInfo,
     MoviewInfo,
 } from './styled';
+import { imagePrefixUrl, NAVIGATION_ROUTES } from '../../../../utils';
 
 export const ListItem = (props) => {
     const navigation = useNavigation();
@@ -19,14 +20,14 @@ export const ListItem = (props) => {
     const { poster_path, title, release_date, popularity, vote_average, original_language, id } = props.item;
 
     const onPressItem = () => {
-        navigation.navigate('Detail', {
+        navigation.navigate(NAVIGATION_ROUTES.DETAIL, {
             movieId: id
         })
     }
     return (
         <StyledWrapper activeOpacity={0.6} onPress={ onPressItem} >
             <StyledImage
-                source={{ uri: `https://image.tmdb.org/t/p/w500/${poster_path}` }}
+                source={{ uri: imagePrefixUrl + poster_path }}
             />
             <MovieInfoWrapper>
                 <BasicInfo>

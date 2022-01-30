@@ -2,6 +2,7 @@ import React from 'react';
 import { ListCarousalItem } from '../../src/components/list-carousel/list-carousel-item/list-carousel-item';
 import { render, fireEvent } from '@testing-library/react-native';
 
+import { NAVIGATION_ROUTES, TEST_IDS } from '../../src/utils'; 
 
 const mockedNavigate = jest.fn();
 
@@ -20,7 +21,7 @@ const props = {
     id: 548263
 };
 
-describe('Divider Component', () => {
+describe('Testing Common Component', () => {
 
     it('should match the List Carousel Item component snapshot', () => {
         const { toJSON } = render(
@@ -36,15 +37,15 @@ describe('Divider Component', () => {
             <ListCarousalItem
                 {...props}
             />);
-        expect(getByTestId('title-wrapper').props.children).toBe('Title');
+        expect(getByTestId(TEST_IDS.CAROUSEL_ITEM_TITLE_WRAPPER).props.children).toBe('Title');
     });
 
-    it('should render item title correctly', async () => {
+    it('should render item rating correctly', async () => {
         const { getByTestId } = render(
             <ListCarousalItem
                 {...props}
             />);
-        expect(getByTestId('rating-container').props.children).toBe(1234);
+        expect(getByTestId(TEST_IDS.CAROUSEL_ITEM_RATING_CONTAINER).props.children).toBe(1234);
     });
 
     it('should navigate to detail screen', () => {
@@ -52,8 +53,8 @@ describe('Divider Component', () => {
             <ListCarousalItem
                 {...props}
             />);
-        fireEvent(getByTestId('container-wrapper'), 'press');
-        expect(mockedNavigate).toHaveBeenCalledWith('Detail', { movieId: 548263 });
+        fireEvent(getByTestId(TEST_IDS.CAROUSEL_ITEM_CONTAINER_WRAPPER), 'press');
+        expect(mockedNavigate).toHaveBeenCalledWith(NAVIGATION_ROUTES.DETAIL, { movieId: 548263 });
     });
 
 });

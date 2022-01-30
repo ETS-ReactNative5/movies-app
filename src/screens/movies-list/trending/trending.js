@@ -5,6 +5,7 @@ import { fetchTrendingMovies } from '../../../redux/actions';
 import { getIsLoadingTrendingrMovies, getTrendingMovies } from '../../../redux/selector';
 import { ListComponent } from '../components/list/list';
 import { ScrollableWithBannerLayout } from '../../../components/scrollable-with-banner-layout/scrollable-with-banner-layout';
+import { imagePrefixUrl } from '../../../utils';
 
 
 export const TrendingMovies = () => {
@@ -25,7 +26,7 @@ export const TrendingMovies = () => {
   return (
     <ScrollableWithBannerLayout
       title={'Top Trending Movie'}
-      bannerImageSrc={`https://image.tmdb.org/t/p/w500/${movies[0]?.poster_path}`}
+      bannerImageSrc={ imagePrefixUrl + movies[0]?.poster_path}
     >
       <ListComponent
         isLoading={isLoading && pageNumber === 1}

@@ -5,9 +5,10 @@ import { fetchPopularMovies } from '../../../redux/actions';
 import { getIsLoadingPopularMovies, getPopularMovies } from '../../../redux/selector';
 import { ListComponent } from '../components/list/list';
 import { ScrollableWithBannerLayout } from '../../../components/scrollable-with-banner-layout/scrollable-with-banner-layout';
+import { imagePrefixUrl } from '../../../utils';
 
 export const PopularMovies = () => {
-  
+
   const [pageNumber, setPageNumber] = useState(2);
 
   const isLoading = useSelector(getIsLoadingPopularMovies);
@@ -25,7 +26,7 @@ export const PopularMovies = () => {
   return (
     <ScrollableWithBannerLayout
       title={'Top Rated Popular Movie'}
-      bannerImageSrc={`https://image.tmdb.org/t/p/w500/${movies[0]?.poster_path}`}
+      bannerImageSrc={imagePrefixUrl + movies[0]?.poster_path}
     >
       <ListComponent
         isLoading={isLoading && pageNumber === 1}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, FlatList } from 'react-native';
-import { ListItem } from '../movie-list-item/movie-list-item';
+import { ListItem } from '../movie-list-item';
 
 export const ListComponent = (props) => {
 

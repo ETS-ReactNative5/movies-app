@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useDispatch, useSelector } from 'react-redux';
-import { ScrollableWithBannerLayout } from '../../components/scrollable-with-banner-layout/scrollable-with-banner-layout';
+import { ScrollableWithBannerLayout } from '../../components/scrollable-with-banner-layout';
 import { fetchPopularMovies, fetchTrendingMovies } from '../../redux/actions';
-import { ListCarousal } from '../../components/list-carousel/list-carousel';
-import { bannerImageSrc } from '../../utils';
+import { ListCarousal } from '../../components/list-carousel';
+import { bannerImageSrc, NAVIGATION_ROUTES } from '../../utils';
 
 import { getIsLoadingPopularMovies, getIsLoadingTrendingrMovies, getPopularMovies, getTrendingMovies } from '../../redux/selector';
 
@@ -27,8 +27,8 @@ export const HomeScreen = () => {
   }, []);
 
   // navigation functions
-  const navigateToPopularMovies = () => navigation.navigate('MoviesTab', { screen: 'Popular' });
-  const navigateToTrendingMovies = () => navigation.navigate('MoviesTab', { screen: 'Trending' });
+  const navigateToPopularMovies = () => navigation.navigate(NAVIGATION_ROUTES.MOVIES_LIST, { screen: NAVIGATION_ROUTES.POPULAR });
+  const navigateToTrendingMovies = () => navigation.navigate(NAVIGATION_ROUTES.MOVIES_LIST, { screen: NAVIGATION_ROUTES.TRENDING });
 
   return (
     (isLoadingPopularMovies || isLoadingTrendingMovies) ? (
