@@ -3,9 +3,9 @@ import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { backIconSvg } from '../../../utils';
+import { backIconSvg, NAVIGATION_ROUTES, searchIconSvg } from '../../../utils';
 
-import { StyledWrapper, StyledIcon, Title } from './styled';
+import { StyledWrapper, StyledIcon, Title, SearchIcon } from './styled';
 import { defaultProps, propTypes } from './props';
 
 
@@ -34,6 +34,12 @@ export const LayoutHeader =
         <Title showBackButton={showBackButton} >
           {title}
         </Title>
+        <TouchableOpacity style={{ zIndex: 11 }} onPress={() => navigation.navigate(NAVIGATION_ROUTES.SEARCH)} >
+          <SearchIcon
+            fill={'black'}
+            xml={searchIconSvg}
+          />
+        </TouchableOpacity>
       </StyledWrapper>
 
     );

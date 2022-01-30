@@ -21,6 +21,12 @@ export const StyledIcon = styled(SvgXml)`
   margin-left:6px;
 `;
 
+export const SearchIcon = styled(SvgXml)`
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
+`;
+
 export const Title = styled.Text`
     flex:1;
     margin-left: ${({ showBackButton }) => showBackButton ? -30 : 0}px;
