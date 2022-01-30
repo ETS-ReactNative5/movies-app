@@ -77,6 +77,7 @@ To make the architecture easy to understand and make it clear and comfortable to
 
 ## Attaching Screenshots of the application to see the layouts:
 
+If images are not loading properly, then please refer to `/demo` folder to see the application layouts.
 - ![Loading ..](/movies-app/demo/1.png?raw=true)
 
 - ![Loading ..](/movies-app/demo/2.png?raw=true)
