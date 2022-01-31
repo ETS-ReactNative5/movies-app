@@ -22,11 +22,13 @@ export const TextWrapper = styled.View`
 export const ReleaseDateText = styled.Text`
     font-size: 16;
     padding-left: 12px;
+    color: black;
 `;
 
 export const MoviewInfo = styled.Text`
     font-size: 16;
     padding-left: 12px;
+    color: black;
 `;
 
 export const ScoreWrapper = styled.View`

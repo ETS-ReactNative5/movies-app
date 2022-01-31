@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { SvgXml } from 'react-native-svg';
+import { Platform } from 'react-native';
 
 export const StyledInput = styled.TextInput`
   border-radius: 8px;
@@ -17,7 +18,7 @@ export const Container = styled.View`
 `;
 
 export const InputHeader = styled.View`
-    height: ${({insets})=> insets.top + 130};
+    height: ${({ insets }) => insets.top + 130};
     width: 100%;
     padding: 20px;
     background: #031d38;
@@ -39,7 +40,7 @@ export const EmptyPlaceholder = styled.View`
     flex:1;
     justify-content: center;
     align-items: center;
-`; 
+`;
 
 export const BackIcon = styled(SvgXml)`
   height: 24px;
@@ -49,5 +50,5 @@ export const BackIcon = styled(SvgXml)`
 export const BackIconWrapper = styled.TouchableOpacity`
   position: absolute;
   margin-left: 20px;
-  top: ${({insets})=> insets.top -2 };
+  top: ${({ insets }) => Platform.select({ ios: insets.top - 2, android: insets.top + 18 })};
 `;

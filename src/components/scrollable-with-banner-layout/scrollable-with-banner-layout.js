@@ -36,7 +36,7 @@ export const ScrollableWithBannerLayout = forwardRef(({
 
   const { width: windowWidth } = useWindowDimensions();
   const BANNER_IMAGE_HEIGHT = windowWidth / 2;
-  const SCROLL_OFFSET = HEADER_TITLE_HEIGHT + (true ? BANNER_IMAGE_HEIGHT : 0);
+  const SCROLL_OFFSET = HEADER_TITLE_HEIGHT + BANNER_IMAGE_HEIGHT;
 
   const [scrollOffset, setScrollOffset] = useState(SCROLL_OFFSET);
 
@@ -105,6 +105,7 @@ export const ScrollableWithBannerLayout = forwardRef(({
         keyboardShouldPersistTaps='handled'
         onScroll={scrollHandler}
         ref={ref}
+        listKey={Math.random().toString()}
         renderItem={renderBody}
         scrollEventThrottle={25}
         showsHorizontalScrollIndicator={false}

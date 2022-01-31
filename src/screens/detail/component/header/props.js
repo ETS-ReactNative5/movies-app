@@ -9,7 +9,7 @@ export const propTypes = {
     imgSrc: string.isRequired,
     popularity: number.isRequired,
     releaseDate: string.isRequired,
-    voteAvg: string.isRequired,
+    voteAvg: number.isRequired,
     genres: string.isRequired,
 };
 

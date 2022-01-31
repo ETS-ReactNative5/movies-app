@@ -31,4 +31,5 @@ export const Title = styled.Text`
     flex:1;
     margin-left: ${({ showBackButton }) => showBackButton ? -30 : 0}px;
     text-align: center;
+    color: black;
 `;

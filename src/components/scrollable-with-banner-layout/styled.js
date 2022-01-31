@@ -22,10 +22,7 @@ export const HEADER_TITLE_HEIGHT = TITLE_FONT_SIZE + TITLE_MARGIN_VERTICAL;
 const getBannerImageHeight = (windowWidth) => windowWidth / 2;
 
 const getContainerMargins = (insets, windowWidth) => {
-  if (true) {
-    return getBannerImageHeight(windowWidth);
-  }
-  return Platform.OS === OPERATING_SYSTEMS.IOS ? 0 : insets.top + HEADER_HEIGHT;
+  return Platform.OS === 'ios' ? getBannerImageHeight(windowWidth) : getBannerImageHeight(windowWidth) + 50;
 };
 
 export const getContainerContentContainerStyles = (isTabBarVisible, insets) => {
@@ -38,9 +35,9 @@ export const getContainerContentContainerStyles = (isTabBarVisible, insets) => {
 export const Container = styled(AnimatedFlatList)`
   background-color: transparent;
   margin-top: ${({ hasBannerImage }) => Platform.select({
-      ios: 0,
-      android: true ? 60 : -60,
-    })}px;
+  ios: 0,
+  android: true ? 60 : -60,
+})}px;
   height: 100%;
   
 `;
@@ -55,8 +52,8 @@ export const ImagePressable = styled.TouchableOpacity`
 export const BodyWrapper = styled.View`
   background-color: white;
   flex:1;
-  padding-bottom: ${({insets})=> insets.bottom}px;
-  margin-top: ${({ hasBannerImage, insets, isLoading,windowWidth }) => (isLoading
+  padding-bottom: ${({ insets }) => insets.bottom}px;
+  margin-top: ${({ hasBannerImage, insets, isLoading, windowWidth }) => (isLoading
     ? 0
     : getContainerMargins(insets, windowWidth))}px;
 `;

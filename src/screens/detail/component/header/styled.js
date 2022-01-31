@@ -12,6 +12,7 @@ export const ImageWrapper = styled(FastImage)`
 export const HeaderWrapper = styled.View`
     flex-direction: row;
     margin: 10px;
+    flex:1;
     align-items: center;
     background: #535658;
     flex:1;

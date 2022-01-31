@@ -79,21 +79,21 @@ To make the architecture easy to understand and make it clear and comfortable to
 ## Attaching Screenshots of the application to see the layouts:
 
 If images are not loading properly, then please refer to `/demo` folder to see the application layouts.
-- ![Loading ..](/movies-app/demo/1.png?raw=true)
+- ![Loading ..](/demo/ios/1.png?raw=true)
 
-- ![Loading ..](/movies-app/demo/2.png?raw=true)
+- ![Loading ..](/demo/ios/2.png?raw=true)
 
-- ![Loading ..](/movies-app/demo/3.png?raw=true)
+- ![Loading ..](/demo/ios/3.png?raw=true)
 
-- ![Loading ..](/movies-app/demo/4.png?raw=true)
+- ![Loading ..](/demo/ios/4.png?raw=true)
 
-- ![Loading ..](/movies-app/demo/5.png?raw=true)
+- ![Loading ..](/demo/ios/5.png?raw=true)
 
-- ![Loading ..](/movies-app/demo/6.png?raw=true)
+- ![Loading ..](/demo/ios/6.png?raw=true)
 
-- ![Loading ..](/movies-app/demo/7.png?raw=true)
+- ![Loading ..](/demo/ios/7.png?raw=true)
 
-- ![Loading ..](/movies-app/demo/8.png?raw=true)
+- ![Loading ..](/demo/ios/8.png?raw=true)
 
-- ![Loading ..](/movies-app/demo/9.png?raw=true)
+- ![Loading ..](/demo/ios/9.png?raw=true)
 

@@ -33,6 +33,7 @@ export const Character = styled.Text`
     margin-bottom: 5px;
     text-align: center;
     margin-top: 5px;
+    color: black;
 `;
 
 export const TextWrapper = styled.View``;

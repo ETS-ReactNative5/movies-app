@@ -15,11 +15,14 @@ export const TitleText = styled.Text`
     width: 130px;
     text-align: center;
     margin-top: 15px;
+    color: black;
 `;
 
 export const TextWrapper = styled.View``;
 
-export const ReleaseDateText = styled.Text``;
+export const ReleaseDateText = styled.Text`
+    color: black;
+`;
 
 export const ScoreWrapper = styled.View`
     position: absolute;

@@ -8,4 +8,5 @@ export const Heading = styled.Text`
     font-size: 20;
     margin-left: 12px;
     margin-top: 8px;
+    color: black;
 `;

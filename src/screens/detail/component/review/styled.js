@@ -28,6 +28,7 @@ export const MovieReviewWrapper = styled.View`
 export const UserName = styled.Text`
     font-weight: bold;
     width: 75%;
+    color: black;
 `;
 export const UserInfo = styled.View`
 `;
@@ -40,9 +41,12 @@ export const AverageScore = styled.View`
 `;
 export const ReviewData = styled.Text`
     margin-vertical: 5px;
+    color: black;
 `;
 
-export const ReviewText = styled.Text``;
+export const ReviewText = styled.Text`
+    color: black;
+`;
 
 export const StyledWrapper = styled.View`
     flex-direction: row;
