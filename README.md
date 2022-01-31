@@ -44,7 +44,7 @@ As others projects, you will need some requirements to run:
 - React Native cli
 - Yarn
 - Android and IOS setup on machine
-- You need to add the api_key provided by the TMDB in the folder `config/config.js`
+- You need to add the api_key provided by the TMDB in the folder `config/index.js`
 
 
 <br>
