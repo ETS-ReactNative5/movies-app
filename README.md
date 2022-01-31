@@ -32,6 +32,7 @@ Consuming the TMDB api's, this application is able to provide you the easiest an
 - User can search for a faviourite movie.
 
 <br>
+
 ## Running locally
 
 As others projects, you will need some requirements to run:
@@ -96,6 +97,3 @@ If images are not loading properly, then please refer to `/demo` folder to see t
 
 - ![Loading ..](/movies-app/demo/9.png?raw=true)
 
-- ![Loading ..](/movies-app/demo/10.png?raw=true)
-
-- ![Loading ..](/movies-app/demo/11.png?raw=true)
